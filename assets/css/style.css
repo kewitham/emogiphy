@@ -15,3 +15,12 @@
 h1{
 	color:lightsteelblue;
 }
+
+#giphycontainer{
+	height: 600px
+}
+
+div#emoView{
+	padding-top: 25px;
+	padding-left: 15px;
+}

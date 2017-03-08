@@ -2,6 +2,7 @@
 <head>
 	<title>Giphy Feels</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
@@ -9,8 +10,11 @@
 <script type="text/javascript" src="assets/javascript/giphy.js"></script>
 <div class="container">
 <div class="page-header">
-  <h1>All the Feels <small>Click on one of the buttons to see the emotion in giphys or enter your own emotion below.</small></h1>
+   <h1>All the Feels <i class="fa fa-hand-peace-o" aria-hidden="true"></i><small>  Click on one of the buttons to see the emotion in giphys or enter your own emotion below. Click on the giphys to play or pause.</small></h1>
 </div>
+
+<div class="row">
+<div class="col-md-6">
 
   <div id="buttonsView"></div>
 
@@ -20,10 +24,15 @@
     
     <input id="addEmo" type="submit" value="submit your emotion">
   </form>
+</div>
+<div class="col-md-6">
 
-
+<div class="row" id="giphycontainer">
 <div id="emoView"></div>
 <div id="emoDiv"></div>
+</div>
+</div>
+</div>
 
 
 </body>

@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
-	var emos = ['sad', 'happy', 'awkward', 'drunk'];
+	var emos = ['sad', 'happy', 'awkward'];
 
 	function displayEmoGiphys(button, i){ 
 
 		var emote = $(button).attr('data-name');
-		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + emote + "&api_key=dc6zaTOxFJmzC&limit=9";
+		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + emote + "&api_key=dc6zaTOxFJmzC&limit=6";
 		
 		$.ajax({url: queryURL, method: 'GET'})
 
@@ -29,12 +29,14 @@ $(document).ready(function(){
 			
 			emoImage.attr('src', emoImage.staticUrl);
 			emoImage.attr('alt', 'emo image');
+			emoImage.css('width', '200px')
+			//emoImage.css('float: left')
 			emoImage.on('click', function(){imageClicked(emoImage);}); 
 			
 			emoDiv.append(emoImage);
-
-			$('#emoView').prepend(emoImage);
 			$('#emoView').prepend(p_rating);
+			$('#emoView').prepend(emoImage);
+			
 		});
 
 	}
